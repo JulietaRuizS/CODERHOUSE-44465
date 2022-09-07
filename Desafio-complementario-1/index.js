@@ -1,6 +1,6 @@
-for (let turno = 1; turno <=8; turno ++){
-         let nombre = prompt ("ingrese su nombre");
-         let mensaje= `Turno #${turno} Nombre:${nombre}`;
+for (let reserva = 1; reserva <=8; reserva ++){
+         let nombre = prompt ("Ingrese su nombre");
+         let mensaje= `Su reserva es la #${reserva} A nombre de:${nombre}`;
          alert (mensaje);
      };
      
