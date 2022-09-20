@@ -6,15 +6,23 @@ let contador = 0;
 
 function ingresarPrecio() {
 	precioProducto = Number(
-		prompt('Ingrese el precio del producto' + (contador + 1) + ':')
-	);
-
-	while (precioProducto > 0) {
+		prompt(
+		  `Ingrese el precio del producto ${
+			contador + 1
+		  } : \n\n para finalizar escribe 0`
+		)
+	  );
+	
+	  while (precioProducto > 0) {
 		gastoTotal = calcularTotal(precioProducto);
 		contador++;
 		precioProducto = Number(
-			prompt('Ingrese el precio del producto' + (contador + 1) + ':')
-		);
+		  prompt(
+			`Ingrese el precio del producto ${
+			  contador + 1
+			} : \n\n para finalizar escribe 0`
+		  )
+		); 
 	}
 
 	if (precioProducto <= 0) {
@@ -27,9 +35,9 @@ function calcularTotal(precioProducto) {
 }
 
 function mostrarTotal() {
-
-	alert('Cantidad de productos: ' + contador);
-	alert('El precio total es $' + gastoTotal);
+	
+	alert(`Cantidad de productos: ${contador}`);
+	alert(`El precio total es $${gastoTotal}`);
 }
 
 ingresarPrecio();

@@ -31,7 +31,7 @@ function sale () {
 }
 function finalAcount (){
     total = amount * price;
-    alert ( "Ha comprado" + amount+ +product+ "Muchas gracias por su compra, a la brevedad recibira los productos.");
+    alert ( "Ha comprado" + amount+ +product+ "Muchas gracias7u, a la brevedad recibira los productos.");
 }
 
 sale ()
