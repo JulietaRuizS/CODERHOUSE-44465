@@ -1,0 +1,9 @@
+#contenedor{
+    background-color: rgba(231, 233, 234, 0.967);
+}
+#cards{
+    display:block;
+    border: solid, black;
+    margin: 50px;
+    padding: 30px;
+}
