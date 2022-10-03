@@ -1,4 +1,5 @@
 let contenedor = document.getElementById("contenedor");
+let boton = document.getElementById("boton");
 let productos = [
   {
     id: 18,
@@ -25,6 +26,9 @@ let productos = [
     imagen:"https://placka.com.ar/wp-content/uploads/2020/10/alu002.png"
   },
 ];
+
+let carrito = []
+
 productos.forEach((producto) => {
   let item = document.createElement("div");
   item.innerHTML = `
@@ -33,10 +37,31 @@ productos.forEach((producto) => {
                     <div class="card-body">
                       <h2 class="card-title"> ${producto.nombre}</h2>
                       <p class="card-text">$${producto.precio}</p>
-                      <a href="#" class="btn btn-primary">Comprar</a>
+                      <button id = ${producto.id} > Agregar al carrito </button>
                     </div>
                   </div>
                   `;
-  contenedor.append(item);
+    contenedor.append(item)
+    const boton = document.getElementById (producto.id)
+    boton.addEventListener ("click", () => agregarProducto (producto))
+  
 }
 );
+const agregarProducto =(producto) => {
+  let productoAgregado = carrito.find (item => item.id === producto.id)
+  if (productoAgregado === undefined){
+    carrito.push({
+      id: producto.id,
+      nombre: producto.nombre,
+      precio: producto.precio,
+      imagen: producto.imagen,
+      cantidad: 1
+    })
+  } else {
+    productoAgregado.precio = productoAgregado.precio + producto.precio
+    productoAgregado.cantidad = productoAgregado.cantidad + 1
+  }
+
+}
+
+boton.addEventListener( "click", () => console.log (carrito))
