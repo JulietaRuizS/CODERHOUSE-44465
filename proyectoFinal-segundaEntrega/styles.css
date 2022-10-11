@@ -1,0 +1,15 @@
+#contenedor{
+    background-color: rgba(231, 233, 234, 0.967);
+}
+#cards{
+    display:block;
+    border: 1px, black, solid;
+    margin: 50px;
+    padding: 30px;
+}
+#boton{
+    margin: 50px;
+    color:rgba(233, 240, 243, 0.967);
+    background-color: rgb(67, 67, 207);
+
+}
